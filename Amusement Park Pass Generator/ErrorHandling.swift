@@ -16,4 +16,5 @@ enum InputError: Error {
     case missingCity
     case missingState
     case missingZip
+    case missingDateOfBirth
 }
