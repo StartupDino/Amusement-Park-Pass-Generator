@@ -8,12 +8,31 @@
 
 import Foundation
 
-protocol Entrant {
-    var areaAccess: [AreaAccess]  { get set }
-    var skipLines: Bool { get set }
-    var personalInfo: PersonalInfo { get set }
+enum AreaAccess {
+    case amusement
+    case kitchen
+    case rideControl
+    case maintenance
+    case office
+    case allRides
+    case skipLines
 }
 
-struct PersonalInfo {
-    //TODO: create variables here
+enum DiscountAccess {
+    case foodDiscount(amount: Int)
+    case merchDiscount(amount: Int)
 }
+
+enum GuestType {
+    case classic
+    case vip
+    case freeChild
+}
+
+enum EmployeeType {
+    case foodService
+    case rideService
+    case maintenance
+    case manager
+}
+
