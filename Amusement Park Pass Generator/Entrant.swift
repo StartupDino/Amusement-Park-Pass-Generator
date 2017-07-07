@@ -59,7 +59,7 @@ protocol GuestEntrant: Entrant {
 protocol EmployeeEntrant: Entrant {
     var type: EmployeeType { get set }
     var profile: PersonalInfo { get set }
-    var discount: [DiscountAccess] { get set }
+    var discount: [DiscountAccess] { get }
 }
 
 // A STRUCT CONTAINING ALL PERSONAL INFORMATION, with errors for missing fields
