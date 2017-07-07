@@ -77,15 +77,15 @@ struct PersonalInfo {
         
         
         if firstName.isEmpty {
-            throw InputError.missingFirstName
+            throw InputError.missingInput(required: "First name can't be empty")
         } else if lastName.isEmpty {
-            throw InputError.missingLastName
+            throw InputError.missingInput(required: "Last name can't be empty")
         } else if streetAddress.isEmpty {
-            throw InputError.missingStreetAddressa
+            throw InputError.missingInput(required: "Street Address can't be empty")
         } else if city.isEmpty {
-            throw InputError.missingCity
+            throw InputError.missingInput(required: "City can't be empty")
         } else if state.isEmpty {
-            throw InputError.missingState
+            throw InputError.missingInput(required: "State can't be empty")
         }
         
         self.firstName = firstName

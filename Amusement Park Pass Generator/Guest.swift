@@ -21,7 +21,7 @@ class Guest: GuestEntrant {
         
         if type == .freeChild {
             guard profile?.dateOfBirth != nil else {
-                throw InputError.missingDateOfBirth
+                throw InputError.missingInput(required: "Date of Birth can't be empty!")
             }
         }
     }

@@ -10,11 +10,6 @@ import Foundation
 
 
 enum InputError: Error {
-    case missingFirstName
-    case missingLastName
-    case missingStreetAddressa
-    case missingCity
-    case missingState
-    case missingZip
-    case missingDateOfBirth
+    case missingInput(required: String)
+    case invalidDateOfBirth
 }
