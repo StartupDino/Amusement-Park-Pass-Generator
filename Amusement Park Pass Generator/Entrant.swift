@@ -71,9 +71,9 @@ struct PersonalInfo {
     var city: String
     var state: String
     var zip: Int
-    var dateOfBirth: Date?
+    var dateOfBirth: String?
     
-    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zip: Int, dateOfBirth: Date?) throws {
+    init(firstName: String, lastName: String, streetAddress: String, city: String, state: String, zip: Int, dateOfBirth: String?) throws {
         
         
         if firstName.isEmpty {
