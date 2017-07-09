@@ -10,7 +10,9 @@ import Foundation
 
 // SETTING UP HIGH LEVEL CASES FOR ACCESS AND DISCOUNTS
 
-enum AreaAccess {
+protocol Access {}
+
+enum AreaAccess: Access {
     case amusement
     case kitchen
     case rideControl
@@ -18,14 +20,26 @@ enum AreaAccess {
     case office
 }
 
-enum RideAccess {
+enum RideAccess: Access {
     case allRides
     case skipLines
 }
 
-enum DiscountAccess {
-    case foodDiscount(amount: Int)
-    case merchDiscount(amount: Int)
+enum DiscountAccess: Access {
+    case foodDiscount(Int)
+    case merchDiscount(Int)
+}
+
+extension DiscountAccess {
+    
+    var discount: Int {
+        switch self {
+        case .foodDiscount(let amt):
+            return amt
+        case .merchDiscount(let amt):
+            return amt
+        }
+    }
 }
 
 // SETTING UP HIGH LEVEL TYPES OF GUESTS AND EMPLOYEES
