@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Employee: EmployeeEntrant {
+class Employee: Person, EmployeeEntrant {
     
     var type: EmployeeType
     var profile: PersonalInfo
@@ -19,16 +19,16 @@ class Employee: EmployeeEntrant {
         self.profile = profile
     }
     
-    var discount: [DiscountAccess] {
-        var whichDiscount: [DiscountAccess]
+    var discountAccess: [DiscountAccess] {
+        var discountHolder: [DiscountAccess]
         
         switch type {
-        case .foodService, .rideService, .maintenance:
-            whichDiscount = [.foodDiscount(amount: 15), .merchDiscount(amount: 25)]
+        case .foodService, .maintenance, .rideService:
+            discountHolder = [.foodDiscount(25), .merchDiscount(25)]
         case .manager:
-            whichDiscount = [.foodDiscount(amount: 25), .merchDiscount(amount: 25)]
+            discountHolder = [.foodDiscount(25), .merchDiscount(25)]
         }
-        return whichDiscount
+        return discountHolder
     }
     
     var areaAccess: [AreaAccess] {
@@ -46,4 +46,35 @@ class Employee: EmployeeEntrant {
         }
         return whichAreas
     }
+    
+    func checkAccess(access: Access) {
+        
+        if let access = access as? AreaAccess {
+            if areaAccess.contains(access) {
+                print("access granted")
+            } else {
+                print("access denied")
+            }
+        }
+        
+        if let access = access as? RideAccess {
+            if rideAccess.contains(access) {
+                print("access granted")
+            } else {
+                print("access denied")
+            }
+        }
+        
+        if let access = access as? DiscountAccess {
+            
+            let discountArray: [Int] = [(discountAccess[0].discount), (discountAccess[1].discount)]
+            
+            if discountArray.contains(access.discount) {
+                print("Discount of \(access.discount)% granted.")
+            } else {
+                print("Discount denied. Your discounts are \(discountAccess[0].discount)% on food and \(discountAccess[1].discount)% on merchandise.")
+            }
+        }
+    }
 }
+

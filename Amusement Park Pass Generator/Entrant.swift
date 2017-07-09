@@ -67,13 +67,13 @@ protocol Entrant {
 protocol GuestEntrant: Entrant {
     var type: GuestType { get set }
     var profile: PersonalInfo? { get set }
-    var discount: [DiscountAccess]? { get }
+    var discountAccess: [DiscountAccess]? { get }
 }
 
 protocol EmployeeEntrant: Entrant {
     var type: EmployeeType { get set }
     var profile: PersonalInfo { get set }
-    var discount: [DiscountAccess] { get }
+    var discountAccess: [DiscountAccess] { get }
 }
 
 // A STRUCT CONTAINING ALL PERSONAL INFORMATION, with errors for missing fields
