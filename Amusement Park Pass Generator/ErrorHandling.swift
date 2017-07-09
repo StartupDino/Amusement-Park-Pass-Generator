@@ -8,8 +8,12 @@
 
 import Foundation
 
-
 enum InputError: Error {
-    case missingInput(required: String)
-    case invalidDateOfBirth
+    case missingFirstName
+    case missingLastName
+    case missingStreetAddressa
+    case missingCity
+    case missingState
+    case missingZip
+    case missingDateOfBirth
 }
