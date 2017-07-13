@@ -22,13 +22,16 @@ class Guest: Person, GuestEntrant {
         self.profile = profile
         
         if type == .freeChild {
+            
+            // This logic checks to make sure A: The DoB isn't empty, and B: the child is under 5 years old.
+            
             if let confirmedDob = profile?.dateOfBirth {
                 
                 let dateFormatter = DateFormatter()
                 dateFormatter.dateFormat = "MM-dd-yyyy"
                 
                 let typeDate = dateFormatter.date(from: confirmedDob)
-                let yearsAlive = Double((typeDate?.timeIntervalSinceNow)!) / 31636000
+                let yearsAlive = Double((typeDate?.timeIntervalSinceNow)!) / 31636000 // Converting Seconds to Years!
                 
                 if yearsAlive <= -5 {
                     print("You are too old for the free child admission status.")
