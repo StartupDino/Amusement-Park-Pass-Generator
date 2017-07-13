@@ -9,8 +9,6 @@
 import Foundation
 
 enum InputError: Error {
-//    case missingInput(required: String)
-//    case tooOld(required: String)
     
     case missingFirstName
     case missingLastName

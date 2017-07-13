@@ -25,6 +25,8 @@ enum RideAccess: Access {
     case skipLines
 }
 
+/* This was my old method. It proved difficult to compare the associated values when checking discounts!
+ 
 enum DiscountAccess: Access {
     case foodDiscount(Int)
     case merchDiscount(Int)
@@ -40,6 +42,14 @@ extension DiscountAccess {
             return amt
         }
     }
+}
+ */
+
+// This is not as pretty, but works fine.
+
+enum DiscountAccess: Access {
+    case foodDiscount10, foodDiscount15, foodDiscount25
+    case merchDiscount20, merchDiscount25
 }
 
 // SETTING UP HIGH LEVEL TYPES OF GUESTS AND EMPLOYEES
