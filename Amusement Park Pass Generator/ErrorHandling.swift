@@ -10,5 +10,5 @@ import Foundation
 
 enum InputError: Error {
     case missingInput(required: String)
-    case missingDateOfBirth
+    case tooOld(required: String)
 }
