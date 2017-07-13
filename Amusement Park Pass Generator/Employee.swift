@@ -17,31 +17,25 @@ class Employee: Person, EmployeeEntrant {
     init(type: EmployeeType, profile: PersonalInfo) throws {
         
         guard profile.firstName != nil && profile.firstName != "" else {
-            //FIX: remove the print statement for part 2
-            print("Error! Missing first name")
-            throw InputError.missingInput(required: "First Name")
+            throw InputError.missingFirstName
         }
         
         guard profile.lastName != nil && profile.lastName != "" else {
-            //FIX: remove the print statement for part 2
-            print("Error! Missing last name!")
-            throw InputError.missingInput(required: "Last Name")
+            throw InputError.missingLastName
         }
         
         guard profile.streetAddress != nil && profile.streetAddress != "" else {
-            //FIX: remove the print statement for part 2
-            print("Error! Missing Address!")
-            throw InputError.missingInput(required: "Street Address")
+            throw InputError.missingAddress
         }
         guard profile.city != nil && profile.city != "" else {
-            //FIX: remove the print statement for part 2
-            print("Error! Missing city!")
-            throw InputError.missingInput(required: "City")
+            throw InputError.missingCity
         }
         guard profile.state != nil && profile.state != "" else {
-            //FIX: remove the print statement for part 2
-            print("Error! Missing state!")
-            throw InputError.missingInput(required: "State")
+            throw InputError.missingState
+        }
+        
+        guard profile.zip != nil else {
+            throw InputError.missingZip
         }
         
         self.type = type
