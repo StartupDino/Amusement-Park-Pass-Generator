@@ -47,7 +47,7 @@ class Employee: Person, EmployeeEntrant {
         
         switch type {
         case .foodService, .maintenance, .rideService:
-            discountHolder = [.foodDiscount(25), .merchDiscount(25)]
+            discountHolder = [.foodDiscount(15), .merchDiscount(25)]
         case .manager:
             discountHolder = [.foodDiscount(25), .merchDiscount(25)]
         }
