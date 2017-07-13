@@ -22,8 +22,23 @@ class Guest: Person, GuestEntrant {
         self.profile = profile
         
         if type == .freeChild {
-            guard profile?.dateOfBirth != nil else {
-                throw InputError.missingDateOfBirth
+            if let confirmedDob = profile?.dateOfBirth {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "MM-dd-yyyy"
+                
+                let typeDate = dateFormatter.date(from: confirmedDob)
+                let yearsAlive = Double((typeDate?.timeIntervalSinceNow)!) / 31636000
+                
+                if yearsAlive <= -5 {
+                    print("You are too old for the free child admission status.")
+                    throw InputError.tooOld(required: "Child is too old for free admission status")
+                } else {
+                    print("Welcome free child!")
+                }
+            } else {
+                print("You must provide your date of birth to be a child entrant.")
+                throw InputError.missingInput(required: "You need to give a date of birth")
             }
         }
     }

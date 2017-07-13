@@ -14,7 +14,36 @@ class Employee: Person, EmployeeEntrant {
     var profile: PersonalInfo
     var rideAccess: [RideAccess] = [.allRides]
     
-    init(type: EmployeeType, profile: PersonalInfo) {
+    init(type: EmployeeType, profile: PersonalInfo) throws {
+        
+        guard profile.firstName != nil && profile.firstName != "" else {
+            //FIX: remove the print statement for part 2
+            print("Error! Missing first name")
+            throw InputError.missingInput(required: "First Name")
+        }
+        
+        guard profile.lastName != nil && profile.lastName != "" else {
+            //FIX: remove the print statement for part 2
+            print("Error! Missing last name!")
+            throw InputError.missingInput(required: "Last Name")
+        }
+        
+        guard profile.streetAddress != nil && profile.streetAddress != "" else {
+            //FIX: remove the print statement for part 2
+            print("Error! Missing Address!")
+            throw InputError.missingInput(required: "Street Address")
+        }
+        guard profile.city != nil && profile.city != "" else {
+            //FIX: remove the print statement for part 2
+            print("Error! Missing city!")
+            throw InputError.missingInput(required: "City")
+        }
+        guard profile.state != nil && profile.state != "" else {
+            //FIX: remove the print statement for part 2
+            print("Error! Missing state!")
+            throw InputError.missingInput(required: "State")
+        }
+        
         self.type = type
         self.profile = profile
     }
@@ -75,6 +104,6 @@ class Employee: Person, EmployeeEntrant {
                 print("Discount denied. Your discounts are \(discountAccess[0].discount)% on food and \(discountAccess[1].discount)% on merchandise.")
             }
         }
+        
     }
 }
-

@@ -17,7 +17,6 @@
 		47F179891F06DD2400151F1C /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F179881F06DD2400151F1C /* Employee.swift */; };
 		47F1798D1F06E6B900151F1C /* Entrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F1798C1F06E6B900151F1C /* Entrant.swift */; };
 		47F4A32F1F0FE36800AF6BC9 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F4A32E1F0FE36800AF6BC9 /* Guest.swift */; };
-		47F4A3311F0FF5F900AF6BC9 /* Swiper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F4A3301F0FF5F900AF6BC9 /* Swiper.swift */; };
 		47F674F81F0E910400B335EA /* ErrorHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F674F71F0E910400B335EA /* ErrorHandling.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		47F179881F06DD2400151F1C /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		47F1798C1F06E6B900151F1C /* Entrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entrant.swift; sourceTree = "<group>"; };
 		47F4A32E1F0FE36800AF6BC9 /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
-		47F4A3301F0FF5F900AF6BC9 /* Swiper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swiper.swift; sourceTree = "<group>"; };
 		47F674F71F0E910400B335EA /* ErrorHandling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,7 +110,6 @@
 				47F1798C1F06E6B900151F1C /* Entrant.swift */,
 				47F4A32E1F0FE36800AF6BC9 /* Guest.swift */,
 				47F179881F06DD2400151F1C /* Employee.swift */,
-				47F4A3301F0FF5F900AF6BC9 /* Swiper.swift */,
 				476198F61F05A1390095B617 /* Main.storyboard */,
 				476198F91F05A1390095B617 /* Assets.xcassets */,
 				476198FB1F05A1390095B617 /* LaunchScreen.storyboard */,
@@ -280,7 +277,6 @@
 				476198F51F05A1390095B617 /* ViewController.swift in Sources */,
 				47F179891F06DD2400151F1C /* Employee.swift in Sources */,
 				47F4A32F1F0FE36800AF6BC9 /* Guest.swift in Sources */,
-				47F4A3311F0FF5F900AF6BC9 /* Swiper.swift in Sources */,
 				47F674F81F0E910400B335EA /* ErrorHandling.swift in Sources */,
 				47F1798D1F06E6B900151F1C /* Entrant.swift in Sources */,
 				476198F31F05A1390095B617 /* AppDelegate.swift in Sources */,
