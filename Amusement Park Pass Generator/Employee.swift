@@ -47,9 +47,9 @@ class Employee: Person, EmployeeEntrant {
         
         switch type {
         case .foodService, .maintenance, .rideService:
-            discountHolder = [.foodDiscount(15), .merchDiscount(25)]
+            discountHolder = [.foodDiscount15, .merchDiscount25]
         case .manager:
-            discountHolder = [.foodDiscount(25), .merchDiscount(25)]
+            discountHolder = [.foodDiscount25, .merchDiscount25]
         }
         return discountHolder
     }
@@ -90,14 +90,11 @@ class Employee: Person, EmployeeEntrant {
         
         if let access = access as? DiscountAccess {
             
-            let discountArray: [Int] = [(discountAccess[0].discount), (discountAccess[1].discount)]
-            
-            if discountArray.contains(access.discount) {
-                print("Discount of \(access.discount)% granted.")
+            if discountAccess.contains(access) {
+                print("Discount of \(access) granted.")
             } else {
-                print("Discount denied. Your discounts are \(discountAccess[0].discount)% on food and \(discountAccess[1].discount)% on merchandise.")
+                print("Discount Denied. You have discounts of \(discountAccess[0]) and \(discountAccess[1])")
             }
         }
-        
     }
 }

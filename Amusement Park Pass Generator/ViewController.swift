@@ -55,10 +55,8 @@ class ViewController: UIViewController {
             
             // UNCOMMENT 2 lines for a discount check swipe (maintenance employee having 25% discount on food??
             
-            let someMaintenanceGal = try Employee(type: .maintenance, profile: PersonalInfo(firstName: "susie", lastName: "mcp", streetAddress: "111 street", city: "atl", state: "ga", zip: 12345, dateOfBirth: nil))
-            print(someMaintenanceGal.discountAccess)
-            someMaintenanceGal.checkAccess(access: DiscountAccess.foodDiscount(25))
-            
+//            let someMaintenanceGal = try Employee(type: .maintenance, profile: PersonalInfo(firstName: "susie", lastName: "mcp", streetAddress: "111 street", city: "atl", state: "ga", zip: 12345, dateOfBirth: nil))
+//            someMaintenanceGal.checkAccess(access: DiscountAccess.foodDiscount25)
             
         } catch InputError.missingDateOfBirth {
             print("no dob")

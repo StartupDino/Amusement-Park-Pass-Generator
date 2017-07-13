@@ -54,7 +54,7 @@ class Guest: Person, GuestEntrant {
         case .classic, .freeChild:
             discountHolder =  nil
         case .vip:
-            discountHolder = [.foodDiscount(10), .merchDiscount(20)]
+            discountHolder = [.foodDiscount10, .merchDiscount20]
         }
         return discountHolder
     }
@@ -101,12 +101,14 @@ class Guest: Person, GuestEntrant {
         
         if let access = access as? DiscountAccess {
             
-            let discountArray: [Int] = [(discountAccess?[0].discount)!, (discountAccess?[1].discount)!]
-            
-            if discountArray.contains(access.discount) {
-                print("Discount of \(access.discount)% granted.")
+            if let confirmedDiscounts = discountAccess {
+                if confirmedDiscounts.contains(access) {
+                    print("Discount of \(access) granted.")
+                } else {
+                    print("Discount Denied. You have the following discounts: \(confirmedDiscounts[0]) and \(confirmedDiscounts[1])")
+                }
             } else {
-                print("Discount denied. Your discounts are \(discountAccess?[0].discount ?? 0)% on food and \(discountAccess?[1].discount ?? 0)% on merchandise.")
+                print("Discount Denied. You have no discounts.")
             }
         }
     }
