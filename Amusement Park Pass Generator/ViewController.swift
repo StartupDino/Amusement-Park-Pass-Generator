@@ -15,10 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        
-        
-        
         // TEST CASES FOR REVIEWERS
+        // See "UNCOMMENT" notes for what each test case will do.
         
         
         do {
@@ -62,8 +60,7 @@ class ViewController: UIViewController {
             print("no dob")
         } catch InputError.tooOld {
             print("kid is too old")
-        }
-        catch InputError.missingFirstName {
+        } catch InputError.missingFirstName {
             print("no first name")
         } catch InputError.missingLastName {
             print("no last name")

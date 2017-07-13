@@ -34,13 +34,11 @@ class Guest: Person, GuestEntrant {
                 let yearsAlive = Double((typeDate?.timeIntervalSinceNow)!) / 31636000 // Converting Seconds to Years!
                 
                 if yearsAlive <= -5 {
-//                    print("You are too old for the free child admission status.")
                     throw InputError.tooOld
                 } else {
                     print("Welcome free child!")
                 }
             } else {
-//                print("You must provide your date of birth to be a child entrant.")
                 throw InputError.missingDateOfBirth
             }
         }
