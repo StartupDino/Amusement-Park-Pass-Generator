@@ -25,26 +25,6 @@ enum RideAccess: Access {
     case skipLines
 }
 
-/* This was my old method. It proved difficult to compare the associated values when checking discounts!
- 
-enum DiscountAccess: Access {
-    case foodDiscount(Int)
-    case merchDiscount(Int)
-}
-
-extension DiscountAccess {
-    
-    var discount: Int {
-        switch self {
-        case .foodDiscount(let amt):
-            return amt
-        case .merchDiscount(let amt):
-            return amt
-        }
-    }
-}
- */
-
 // This is not as pretty, but works fine.
 
 enum DiscountAccess: Access {
