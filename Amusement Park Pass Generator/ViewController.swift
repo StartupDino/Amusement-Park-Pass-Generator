@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        // TEST CASES FOR REVIEWERS
-        // See "UNCOMMENT" notes for what each test case will do.
+        //TODO: add vendor enums, class, etc
+        //TODO: add in vertical stacks in content area
         
         
         do {
