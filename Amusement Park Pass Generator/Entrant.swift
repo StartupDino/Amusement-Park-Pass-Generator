@@ -47,6 +47,7 @@ enum EmployeeType {
     case rideService
     case maintenance
     case manager
+    case contract
 }
 
 // SETTING GUEST AND EMPLOYEE REQUIREMENTS
@@ -66,6 +67,12 @@ protocol EmployeeEntrant: Entrant {
     var type: EmployeeType { get set }
     var profile: PersonalInfo { get set }
     var discountAccess: [DiscountAccess] { get }
+}
+
+protocol VendorEntrant: Entrant {
+    var profile: PersonalInfo { get set }
+    var companyName: String { get set }
+    var dateOfVisit: String { get set }
 }
 
 // A STRUCT CONTAINING ALL PERSONAL INFORMATION, with errors for missing fields

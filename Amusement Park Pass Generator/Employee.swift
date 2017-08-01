@@ -50,6 +50,8 @@ class Employee: Person, EmployeeEntrant {
             discountHolder = [.foodDiscount15, .merchDiscount25]
         case .manager:
             discountHolder = [.foodDiscount25, .merchDiscount25]
+        case .contract:
+            discountHolder = []
         }
         return discountHolder
     }
@@ -58,7 +60,7 @@ class Employee: Person, EmployeeEntrant {
         var whichAreas: [AreaAccess]
         
         switch type {
-        case .foodService:
+        case .foodService, .contract:
             whichAreas = [.amusement, .kitchen]
         case .rideService:
             whichAreas = [.amusement, .rideControl]
