@@ -51,7 +51,9 @@ class Guest: Person, GuestEntrant {
         switch type {
         case .classic, .freeChild:
             discountHolder =  nil
-        case .vip:
+        case .senior:
+            discountHolder = [.foodDiscount10, .merchDiscount10]
+        case .vip, .seasonPass:
             discountHolder = [.foodDiscount10, .merchDiscount20]
         }
         return discountHolder
@@ -61,7 +63,7 @@ class Guest: Person, GuestEntrant {
         var whichAreas: [AreaAccess]
         
         switch type {
-        case .classic, .freeChild, .vip:
+        case .classic, .freeChild, .vip, .seasonPass, .senior:
             whichAreas = [.amusement]
         }
         return whichAreas
@@ -73,7 +75,7 @@ class Guest: Person, GuestEntrant {
         switch type {
         case .classic, .freeChild:
             whichRides = [.allRides]
-        case .vip:
+        case .vip, .seasonPass, .senior:
             whichRides = [.allRides, .skipLines]
         }
         return whichRides

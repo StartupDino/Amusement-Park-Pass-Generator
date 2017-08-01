@@ -29,7 +29,7 @@ enum RideAccess: Access {
 
 enum DiscountAccess: Access {
     case foodDiscount10, foodDiscount15, foodDiscount25
-    case merchDiscount20, merchDiscount25
+    case merchDiscount10, merchDiscount20, merchDiscount25
 }
 
 // SETTING UP HIGH LEVEL TYPES OF GUESTS AND EMPLOYEES
@@ -38,6 +38,8 @@ enum GuestType {
     case classic
     case vip
     case freeChild
+    case seasonPass
+    case senior
 }
 
 enum EmployeeType {
