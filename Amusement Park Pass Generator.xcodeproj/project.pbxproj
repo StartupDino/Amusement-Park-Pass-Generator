@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		472E8F161F3011920088C451 /* Vendor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472E8F151F3011920088C451 /* Vendor.swift */; };
 		476198F31F05A1390095B617 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476198F21F05A1390095B617 /* AppDelegate.swift */; };
 		476198F51F05A1390095B617 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476198F41F05A1390095B617 /* ViewController.swift */; };
 		476198F81F05A1390095B617 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476198F61F05A1390095B617 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		472E8F151F3011920088C451 /* Vendor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vendor.swift; sourceTree = "<group>"; };
 		476198EF1F05A1390095B617 /* Amusement Park Pass Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Amusement Park Pass Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		476198F21F05A1390095B617 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		476198F41F05A1390095B617 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				47F1798C1F06E6B900151F1C /* Entrant.swift */,
 				47F4A32E1F0FE36800AF6BC9 /* Guest.swift */,
 				47F179881F06DD2400151F1C /* Employee.swift */,
+				472E8F151F3011920088C451 /* Vendor.swift */,
 				476198F61F05A1390095B617 /* Main.storyboard */,
 				476198F91F05A1390095B617 /* Assets.xcassets */,
 				476198FB1F05A1390095B617 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				476198F51F05A1390095B617 /* ViewController.swift in Sources */,
+				472E8F161F3011920088C451 /* Vendor.swift in Sources */,
 				47F179891F06DD2400151F1C /* Employee.swift in Sources */,
 				47F4A32F1F0FE36800AF6BC9 /* Guest.swift in Sources */,
 				47F674F81F0E910400B335EA /* ErrorHandling.swift in Sources */,
