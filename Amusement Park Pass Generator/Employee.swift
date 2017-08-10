@@ -13,7 +13,7 @@ class Employee: Person, EmployeeEntrant {
     var type: EmployeeType
     var profile: PersonalInfo
     var rideAccess: [RideAccess] = [.allRides]
-    
+        
     init(type: EmployeeType, profile: PersonalInfo) throws {
         
         guard profile.firstName != nil && profile.firstName != "" else {
@@ -50,8 +50,6 @@ class Employee: Person, EmployeeEntrant {
             discountHolder = [.foodDiscount15, .merchDiscount25]
         case .manager:
             discountHolder = [.foodDiscount25, .merchDiscount25]
-        case .contract:
-            discountHolder = []
         }
         return discountHolder
     }
@@ -60,7 +58,7 @@ class Employee: Person, EmployeeEntrant {
         var whichAreas: [AreaAccess]
         
         switch type {
-        case .foodService, .contract:
+        case .foodService:
             whichAreas = [.amusement, .kitchen]
         case .rideService:
             whichAreas = [.amusement, .rideControl]

@@ -47,7 +47,6 @@ enum EmployeeType {
     case rideService
     case maintenance
     case manager
-    case contract
 }
 
 // SETTING GUEST AND EMPLOYEE REQUIREMENTS
